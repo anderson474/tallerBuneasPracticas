@@ -7,6 +7,13 @@ public class ManejoBiblioteca {
         System.out.println(c1);
         System.out.println(c2);
 
+        createPlaylist playlist1= new createPlaylist("mis canciones preferidas");
+        playlist1.AddCancion(c2);
+        System.out.println("playlist1 = " + playlist1);
+
+
+
+
 
 
 
