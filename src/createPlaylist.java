@@ -2,32 +2,33 @@ import java.util.Arrays;
 
 public class createPlaylist {
     private String name;
-    private Cancion Canciones[] = new Cancion[2];
-    private static int cont=0;
+    private Cancion[] Canciones =  new Cancion[12];
+    private int cont=0;
 
     public createPlaylist(String name) {
         this.name = name;
+        this.cont=0;
     }
 
 
     public void AddCancion(Cancion song){
-        Canciones[cont]=song;
-        cont=cont+1;
-        if(cont>=2){
-            throw new RuntimeException("Solo se pueden adicionar hasta dos");
+        this.cont=0;
+        Canciones[this.cont] = song;
+        this.cont++;
+        if(cont>=12){
+            throw new RuntimeException("Solo se pueden adicionar hasta doce canciones a la playlist");
         }
 
     }
 
-    public String getName() {
-        return name;
-    }
 
-    @Override
-    public String toString() {
-        return "createPlaylist{" +
-                "name='" + name + '\'' +
-                ", Canciones=" + Arrays.toString(Canciones) +
-                '}';
+    public void imprimir() {
+        System.out.println("playlist "+ this.name);
+        for(int i=0; i<cont; i++) {
+            System.out.println(Canciones[i]);
+        }
+
+
+
     }
 }

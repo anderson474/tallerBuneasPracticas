@@ -26,16 +26,18 @@ public class Cancion {
         this.id=contador;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     @Override
     public String toString() {
-        return "Cancion{" +
-                "title='" + title + '\'' +
-                ", id=" + id +
-                ", fecha=" + fecha +
-                ", duracion=" + duracion +
-                ", genero='" + genero + '\'' +
-                ", caratula='" + caratula + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                '}';
+        return "Cancion" + id +
+                ", titulo " + title  +
+                ", fecha " + fecha +
+                ", duracion " + duracion +
+                ", genero " + genero  +
+                ", caratula " + caratula  +
+                ", descripcion " + descripcion ;
     }
 }
