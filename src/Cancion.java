@@ -38,11 +38,15 @@ public class Cancion {
                 '}';
     }
 
+    public LocalDate getFecha(){
+        return this.fecha;
+    }
+
     public int getDuracion(){
         return this.duracion;
     }
 
-    public LocalDate getFecha(){
-        return this.fecha;
+    public String getGenero(){
+        return this.genero;
     }
 }

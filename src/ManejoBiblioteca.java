@@ -1,11 +1,14 @@
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class ManejoBiblioteca {
     public static void main(String[] args) {
         Libreria biblioteca = new Libreria();
         Cancion c1 = new Cancion("Laugh Now Cry Later","2022-01-01",1000,"urbano","caratula"
         ,"esta es una cancion");
-        Cancion c2 = new Cancion("Laugh Now Cryed Later","2021-01-01",500,"urbano","caratula1"
+        Cancion c2 = new Cancion("Laugh Now Cryed Later","2021-01-01",500,"regeton","caratula1"
                 ,"esta es una cancion2");
         Cancion c3 = new Cancion("Blinding Lights","2020-10-11",700,"urbano","caratula2"
                 ,"esta es una cancion3");
@@ -40,6 +43,12 @@ public class ManejoBiblioteca {
             System.out.println(biblioteca.canciones.get(i));
         }
 
+        
+        
+        System.out.println("Filtrado por genero: " );
+        for(int i=0; i<biblioteca.filtrarPorGenero("regeton").size(); i++){
+            System.out.println(biblioteca.filtrarPorGenero("regeton").get(i));
+        }
 
     }
 }
