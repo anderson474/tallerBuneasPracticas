@@ -27,6 +27,12 @@ public class ManejoBiblioteca {
             System.out.println(biblioteca.canciones.get(i));
         }
 
+        Playlist favoritas = new Playlist("Favoritas");
+
+        favoritas.canciones.add(c1);
+
+        System.out.println(favoritas.canciones.get(0));
+
         
 
 
