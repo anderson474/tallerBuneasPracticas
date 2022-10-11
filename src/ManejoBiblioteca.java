@@ -8,9 +8,11 @@ public class ManejoBiblioteca {
         bib.AddCancion(c1);
         bib.AddCancion(c2);
 
-        Filtrar filtro1 = new Filtrar(bib);
-        filtro1.FiltrarGenero("urbano");
-        filtro1.imprimir();
+        Filtrar filtrobib = new Filtrar(bib);
+        filtrobib.FiltrarGenero("urbano");
+        filtrobib.imprimir();
+        filtrobib.FiltrarGenero("regeton");
+        filtrobib.imprimir();
 
         createPlaylist playlist1= new createPlaylist("mis canciones preferidas");
         playlist1.AddCancion(c2);
@@ -26,6 +28,10 @@ public class ManejoBiblioteca {
         playlist3.AddCancion(c1);
         playlist3.AddCancion(c2);
         playlist3.imprimir();
+
+        Filtrar filtroplay3 = new Filtrar(playlist3);
+        filtroplay3.FiltrarGenero("urbano");
+        filtroplay3.imprimir();
 
 
 

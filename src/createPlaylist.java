@@ -33,6 +33,10 @@ public class createPlaylist {
     }
 
 
+    public int getCont() {
+        return cont;
+    }
+
     /**
      * Metodo que agrega la cancion a la lista
      * de la playlist
