@@ -33,8 +33,12 @@ public class ManejoBiblioteca {
 
         System.out.println(favoritas.canciones.get(0));
 
-        
+        Collections.sort(biblioteca.canciones, new OrdenarPorFecha());
 
+        System.out.println("Ordenado por fecha");
+        for(int i=0; i<biblioteca.canciones.size(); i++){
+            System.out.println(biblioteca.canciones.get(i));
+        }
 
 
     }
