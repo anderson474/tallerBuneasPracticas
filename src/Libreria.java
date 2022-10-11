@@ -1,11 +1,14 @@
-public abstract class Libreria {
-    protected Cancion[] canciones;
-    protected int contador;
+import java.util.ArrayList;
+
+public class Libreria {
+    protected ArrayList<Cancion> canciones;
+    
 
     public Libreria(){
-    canciones = new Cancion[50];
-    contador = 0; 
+    canciones = new ArrayList<Cancion>();
     }
 
-    public abstract void adicionarCancion(Cancion cancion);
+    
 }
+
+

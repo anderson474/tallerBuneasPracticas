@@ -1,4 +1,3 @@
-import java.time.Duration;
 import java.time.LocalDate;
 
 
@@ -37,5 +36,9 @@ public class Cancion {
                 ", caratula='" + caratula + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 '}';
+    }
+
+    public int getDuracion(){
+        return this.duracion;
     }
 }
