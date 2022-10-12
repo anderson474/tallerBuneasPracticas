@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * Filtrar canciones del mismo genero
  * Filtrar canciones en el mismo año
@@ -6,7 +10,9 @@
 public class Filtrar {
     protected Biblioteca bib;
     protected createPlaylist playlist;
-    protected Cancion[] CancionesFiltradas=new Cancion[30];
+
+    protected ArrayList<Cancion> CancionesFiltradas= new ArrayList<Cancion>();
+    protected final ArrayList<Cancion> Cancion= Biblioteca.getCanciones();
 
     protected String genero;
     private int cont;
@@ -24,47 +30,13 @@ public class Filtrar {
 
 
     public void FiltrarGenero(String genero){
-        this.genero=genero;
-        this.cont=0;
-        Cancion[] listaCanciones;
-        int cantidadCanciones;
-        if(turn){
-            listaCanciones= bib.getCanciones();
-            cantidadCanciones=bib.getCont();
-        }else{
-            listaCanciones= playlist.getCanciones();
-            cantidadCanciones=playlist.getCont();
-        }
 
-        //genero=new String(genero);
-        if("urbano".equalsIgnoreCase(genero)){
-            for(int i=0; i<cantidadCanciones; i++){
-                if(listaCanciones[i].getGenero()=="urbano"){
-                    CancionesFiltradas[this.cont]=listaCanciones[i];
-                    this.cont++;
-                }
-            }
-        }
-        else if("regeton".equalsIgnoreCase(genero)){
-            for(int i=0; i<cantidadCanciones; i++){
-                if(listaCanciones[i].getGenero()=="regeton"){
-                    CancionesFiltradas[this.cont]=listaCanciones[i];
-                    this.cont++;
-                }
-            }
-        }
-        else if ("pop".equalsIgnoreCase(genero)){
-            for(int i=0; i<cantidadCanciones; i++){
-                if(listaCanciones[i].getGenero()=="pop"){
-                    CancionesFiltradas[this.cont]=listaCanciones[i];
-                    this.cont++;
-                }
-            }
-        }
-        else{
-            System.out.println("no entiendo tu filtro, recuerda que solo existe pop" +
-                    " regeton y urbano");
-        }
+        List<Cancion> cancionesFiltradas =
+                this.Cancion.stream().filter(Cancion -> Cancion.getGenero() == genero).collect(Collectors.toList());
+
+
+
+
     }
 
     public String getGenero() {
@@ -80,10 +52,9 @@ public class Filtrar {
                     " por el genero: "+ getGenero()+":");
         }
 
-        for(int i=0; i<cont; i++){
-            System.out.println(CancionesFiltradas[i]);
+        for(int i=0; i< CancionesFiltradas.size(); i++){
+            System.out.println(CancionesFiltradas.get(i));
         }
     }
-
 
 }
