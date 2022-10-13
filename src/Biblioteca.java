@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Biblioteca {
-    protected static ArrayList<Cancion> Canciones =   new ArrayList<Cancion>();
+    protected ArrayList<Cancion> Canciones =   new ArrayList<Cancion>();
     protected static int cont;
     public Biblioteca(){
         cont=0;
@@ -15,11 +15,11 @@ public class Biblioteca {
         }
     }
 
-    public static ArrayList<Cancion> getCanciones() {
+    public ArrayList<Cancion> getCanciones() {
         return Canciones;
     }
 
-    public static int getCont() {
+    public int getCont() {
         return cont;
     }
 }

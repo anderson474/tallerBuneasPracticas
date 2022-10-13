@@ -9,18 +9,20 @@ public class ManejoBiblioteca {
         bib.AddCancion(c2);
 
         Filtrar filtrobib = new Filtrar(bib);
-        System.out.println("Filtrado por genero: " );
-        for(int i=0; i<biblioteca.filtrarPorGenero("regeton").size(); i++){
-            System.out.println(biblioteca.filtrarPorGenero("regeton").get(i));
-        }
+        filtrobib.FiltrarGenero("regeton");
+        filtrobib.imprimir();
+        filtrobib.FiltrarGenero("urbano");
+        filtrobib.imprimir();
+
 
         createPlaylist playlist1= new createPlaylist("mis canciones preferidas");
         playlist1.AddCancion(c2);
         playlist1.imprimir();
-        //playlist1.DeleteCanciones();
+
 
         createPlaylist playlist2= new createPlaylist("mis canciones no tan preferidas");
-
+        playlist2.AddCancion(c1);
+        playlist2.imprimir();
 
 
         createPlaylist playlist3= new createPlaylist("todas las canciones");

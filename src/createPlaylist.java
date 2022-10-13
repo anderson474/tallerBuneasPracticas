@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -18,7 +19,7 @@ import java.util.Arrays;
  */
 public class createPlaylist {
     private String name;
-    private Cancion[] Canciones =  new Cancion[12];
+    protected ArrayList<Cancion> Canciones =   new ArrayList<Cancion>();
     private int cont=0;
 
     /**
@@ -48,7 +49,7 @@ public class createPlaylist {
      */
 
     public void AddCancion(Cancion song) {
-        Canciones[this.cont] = song;
+        Canciones.add(song);
         this.cont++;
         if(cont>=12){
             throw new RuntimeException("Solo se pueden adicionar hasta doce canciones a la playlist");
@@ -62,8 +63,9 @@ public class createPlaylist {
     public void imprimir() {
         System.out.println("playlist "+ getName());
         for(int i=0; i<cont; i++) {
-            System.out.println(Canciones[i]);
+            System.out.println(Canciones.get(i));
         }
+
     }
 
     public String getName() {
@@ -71,7 +73,7 @@ public class createPlaylist {
     }
 
 
-    public Cancion[] getCanciones() {
+    public ArrayList<Cancion> getCanciones() {
         return Canciones;
     }
 }
