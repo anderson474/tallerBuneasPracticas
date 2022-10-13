@@ -10,9 +10,9 @@ public class ManejoBiblioteca {
 
         Filtrar filtrobib = new Filtrar(bib);
         filtrobib.FiltrarGenero("regeton");
-        filtrobib.imprimir();
+        filtrobib.imprimirGe();
         filtrobib.FiltrarGenero("urbano");
-        filtrobib.imprimir();
+        filtrobib.imprimirGe();
 
 
         createPlaylist playlist1= new createPlaylist("mis canciones preferidas");
@@ -32,7 +32,9 @@ public class ManejoBiblioteca {
 
         Filtrar filtroplay3 = new Filtrar(playlist3);
         filtroplay3.FiltrarGenero("urbano");
-        filtroplay3.imprimir();
+        filtroplay3.imprimirGe();
+        filtroplay3.FiltrarPorAño(2022);
+        filtroplay3.imprimirYear();
 
 
 

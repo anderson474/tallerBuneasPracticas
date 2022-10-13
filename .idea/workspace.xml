@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b46c1cf3-28b2-417d-9813-5e3c44514253" name="Changes" comment="">
+    <list default="true" id="b46c1cf3-28b2-417d-9813-5e3c44514253" name="Changes" comment="Se acaba de implemetar la forma mas eficiente para filtrar por genero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Biblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cancion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cancion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Filtrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Filtrar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ManejoBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManejoBiblioteca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/createPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/createPlaylist.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,9 +88,18 @@
       <option name="presentableId" value="Default" />
       <updated>1665403454565</updated>
     </task>
+    <task id="LOCAL-00001" summary="Se acaba de implemetar la forma mas eficiente para filtrar por genero">
+      <created>1665634615811</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665634615812</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
     <option name="COLUMN_ID_ORDER">
       <list>
         <option value="Default.Root" />
@@ -112,6 +120,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se acaba de implemetar la forma mas eficiente para filtrar por genero" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se acaba de implemetar la forma mas eficiente para filtrar por genero" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

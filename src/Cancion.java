@@ -71,4 +71,8 @@ public class Cancion {
     public String getGenero() {
         return genero;
     }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
 }
