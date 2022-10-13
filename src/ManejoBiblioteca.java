@@ -1,3 +1,5 @@
+import java.util.Collections;
+
 public class ManejoBiblioteca {
     public static void main(String[] args) {
         Cancion c1 = new Cancion("Laugh Now Cry Later","2022-01-01",1000,"regeton","caratula"
@@ -37,7 +39,18 @@ public class ManejoBiblioteca {
         filtroplay3.imprimirYear();
 
 
+        Collections.sort(bib.getCanciones(), new OrdenarPorDuracion());
+        System.out.println("Ordenado por duración");
+        for(int i=0; i<bib.getCanciones().size(); i++){
+            System.out.println(bib.getCanciones().get(i));
+        }
 
+        Collections.sort(bib.getCanciones(), new OrdenarPorFecha());
+
+        System.out.println("Ordenado por fecha");
+        for(int i=0; i<bib.getCanciones().size(); i++){
+            System.out.println(bib.getCanciones().get(i));
+        }
 
     }
 }

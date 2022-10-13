@@ -75,4 +75,8 @@ public class Cancion {
     public LocalDate getFecha() {
         return fecha;
     }
+
+    public int getDuracion() {
+        return duracion;
+    }
 }
