@@ -3,9 +3,12 @@ import java.time.LocalDate;
 
 
 /**
- * [Esta clase permite crear canciones con sus diferentes
- * caracteristicas
- *
+ * [
+ * Esta clase permite crear canciones con sus diferentes
+ * caracteristicas.
+ * ej:
+ * Cancion c1 = new Cancion("Laugh Now Cry Later","2022-01-01",1000,"regeton","caratula"
+ *         ,"esta es una cancion");
  * ]
  *
  * @version [1.0.0]

@@ -25,7 +25,7 @@ public class createPlaylist {
     /**
      *el constructor inicializa el contador en cero
      * para que cada vez que se quiera crear una playlist empieze
-     * en la posición cero, y además su nombre.
+     * en la posición cero, y además inicializa su nombre(el de la playlist).
      * @param name el nombre de la playlist.
      */
     public createPlaylist(String name) {
@@ -44,15 +44,15 @@ public class createPlaylist {
      *
      * @param song el objeto canción que se pasa su referencia
      *             como parametro y lo ubicamos en una lista.
-     * @throws RuntimeException si se quiere tener más de doce o doce
-     * canciones la consola te sacara de ejecución.
+     * @throws IllegalArgumentException si se quiere tener más de doce o doce
+     * canciones la consola te sacará un error.
      */
 
     public void AddCancion(Cancion song) {
         Canciones.add(song);
         this.cont++;
-        if(cont>=12){
-            throw new RuntimeException("Solo se pueden adicionar hasta doce canciones a la playlist");
+        if(cont>=1){
+            throw new IllegalArgumentException("Solo se pueden adicionar hasta doce canciones a la playlist");
         }
     }
 

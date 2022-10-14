@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b46c1cf3-28b2-417d-9813-5e3c44514253" name="Changes" comment="Se implemento un merge manual, integrando el ordenar por fecha y ordenar por duración.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cancion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cancion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Filtrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Filtrar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/createPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/createPlaylist.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/merys/OneDrive/Escritorio/CursoJava/EstructurasPrincipales/TallerBuenasPracticas",
+    "last_opened_file_path": "C:/Users/merys/OneDrive/Escritorio/CursoJava/EstructurasPrincipales/ManejoExcepciones1",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
