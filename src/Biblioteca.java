@@ -28,12 +28,13 @@ public class Biblioteca {
      * La varaible donde se va a almacenar las canciones que se filtraron
      * por genero.
      */
-    protected List<Cancion> CancionesFiltradasGene = new ArrayList<>();
+    protected List<Cancion> CancionesFiltradasGene;
     /**
      * La varaible donde se va a almacenar las canciones que se filtraron
      * por año.
      */
     protected List<Cancion> CancionesFiltradasYear = new ArrayList<>();
+    protected List<Cancion> CancionesFiltradasId = new ArrayList<>();
     /**
      * El año que se va mandar a buscar.
      */
@@ -80,7 +81,7 @@ public class Biblioteca {
     public void FiltrarGenero(String genero){
         this.genero=genero;
         this.CancionesFiltradasGene =
-                Canciones.stream().filter(cancion -> cancion.getGenero() == genero).collect(Collectors.toList());
+                 Canciones.stream().filter(cancion -> cancion.getGenero()==genero).collect(Collectors.toList());
     }
 
     /**
@@ -110,7 +111,15 @@ public class Biblioteca {
         return year;
     }
 
-    public String getGenero() {
-        return genero;
+
+
+    public Cancion filtroId(int id){
+        this.CancionesFiltradasId=
+                 Canciones.stream().filter(cancion -> cancion.getId()==id).collect(Collectors.toList());
+        return (Cancion) CancionesFiltradasId;
+    }
+
+    public List<Cancion> getCancionesFiltradasId() {
+        return CancionesFiltradasId;
     }
 }

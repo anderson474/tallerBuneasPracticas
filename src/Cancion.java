@@ -82,4 +82,8 @@ public class Cancion {
     public int getDuracion() {
         return duracion;
     }
+
+    public int getId() {
+        return id;
+    }
 }

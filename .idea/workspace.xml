@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b46c1cf3-28b2-417d-9813-5e3c44514253" name="Changes" comment="Se implemento un merge manual, integrando el ordenar por fecha y ordenar por duración.">
+    <list default="true" id="b46c1cf3-28b2-417d-9813-5e3c44514253" name="Changes" comment="Concretado de las clases biblioteca y creatplaylist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Biblioteca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Filtrar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cancion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cancion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ManejoBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManejoBiblioteca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/createPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/createPlaylist.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665678303213</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Concretado de las clases biblioteca y creatplaylist">
+      <created>1665778924047</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665778924048</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -146,7 +152,8 @@
     <MESSAGE value="Se acaba de implemetar la forma mas eficiente para filtrar por genero" />
     <MESSAGE value="Se implemento correctamente el filtro por año" />
     <MESSAGE value="Se implemento un merge manual, integrando el ordenar por fecha y ordenar por duración." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se implemento un merge manual, integrando el ordenar por fecha y ordenar por duración." />
+    <MESSAGE value="Concretado de las clases biblioteca y creatplaylist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Concretado de las clases biblioteca y creatplaylist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -159,6 +166,15 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="22" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.InputMismatchException" package="java.util" />
+          <option name="timeStamp" value="33" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ManejoBiblioteca.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
