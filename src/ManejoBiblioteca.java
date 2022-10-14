@@ -4,40 +4,61 @@ public class ManejoBiblioteca {
     public static void main(String[] args) {
         Cancion c1 = new Cancion("Laugh Now Cry Later","2022-01-01",1000,"regeton","caratula"
         ,"esta es una cancion");
-        Cancion c2 = new Cancion("cake by the Ocean","2021-01-01",100,"urbano","caratula1"
+        Cancion c2 = new Cancion("cake by the Ocean","2019-01-01",100,"urbano","caratula1"
                 ,"esta es una cancion2");
         Biblioteca bib=new Biblioteca();
         bib.AddCancion(c1);
         bib.AddCancion(c2);
 
-        Filtrar filtrobib = new Filtrar(bib);
-        filtrobib.FiltrarGenero("regeton");
-        filtrobib.imprimirGe();
-        filtrobib.FiltrarGenero("urbano");
-        filtrobib.imprimirGe();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        System.out.println("tu biblioteca: ");
+        bib.imprimir(bib.getCanciones());
+
+        bib.FiltrarGenero("regeton");
+        System.out.println("Las canciones filtradas por el genero "+bib.getGenero()+ " :");
+        bib.imprimir(bib.getCancionesFiltradasGene());
+        bib.FiltrarPorAño(2022);
+        System.out.println("Las canciones filtradas por el year "+bib.getYear()+ " :");
+        bib.imprimir(bib.getCancionesFiltradasYear());
+
 
 
         createPlaylist playlist1= new createPlaylist("mis canciones preferidas");
         playlist1.AddCancion(c2);
-        playlist1.imprimir();
+        System.out.println("mis canciones preferidas");
+        playlist1.imprimir(playlist1.getCanciones());
 
 
         createPlaylist playlist2= new createPlaylist("mis canciones no tan preferidas");
         playlist2.AddCancion(c1);
-        playlist2.imprimir();
+        System.out.println(playlist2.getName());
+        playlist2.imprimir(playlist2.getCanciones());
 
 
         createPlaylist playlist3= new createPlaylist("todas las canciones");
         playlist3.AddCancion(c1);
         playlist3.AddCancion(c2);
-        playlist3.imprimir();
+        System.out.println(playlist3.getName());
+        playlist3.imprimir(playlist3.getCanciones());
 
-        Filtrar filtroplay3 = new Filtrar(playlist3);
-        filtroplay3.FiltrarGenero("urbano");
-        filtroplay3.imprimirGe();
-        filtroplay3.FiltrarPorAño(2022);
-        filtroplay3.imprimirYear();
 
+        playlist3.FiltrarGenero("urbano");
+        System.out.println("Las canciones filtradas por el genro "+playlist3.getGenero()+": " );
+        playlist3.imprimir(playlist3.getCancionesFiltradasGene());
 
         Collections.sort(bib.getCanciones(), new OrdenarPorDuracion());
         System.out.println("Ordenado por duración");
