@@ -72,6 +72,37 @@ public class ManejoBiblioteca {
         for(int i=0; i<bib.getCanciones().size(); i++){
             System.out.println(bib.getCanciones().get(i));
         }
+        
+        Scanner input = new Scanner(System.in);
+        Boolean menu;
+        System.out.println("Bienvenido a su biblioteca de canciones");
+        do{
+            System.out.println("Seleccione una opción");
+            System.out.println("1. Adicionar canción \n2. Ver listado de canciones \n3.Ordenar por duracion");
+            System.out.println("4. Ordenar por fecha \n5. Filtar por genero \n6.Filtrar por año");
+            String accion = input.nextLine();
 
+            switch(accion){
+                case "1":
+                System.out.println("Escriba el nombre de la canción");
+                String nombre = input.nextLine();
+                System.out.println("Escriba la fecha \"2022-07-07\"");
+                CharSequence fecha = input.nextLine();
+                System.out.println("Duracion de la canción en segundos: ");
+                int duracion = input.nextInt();
+                System.out.println("Escriba el genero de la canción");
+                String genero = input.nextLine();
+                System.out.println("Escriba la caratula de la canción");
+                String caratula = input.nextLine();
+                System.out.println("Escriba la descripcion de la canción");
+                String descripcion = input.nextLine();
+
+                biblioteca.canciones.add(new Cancion(nombre, fecha, duracion, genero, caratula, descripcion));
+
+            }
+            System.out.println("Desea realizar otra opción true/false:");
+            menu = input.nextBoolean();
+        }
+        while(menu);
     }
 }
