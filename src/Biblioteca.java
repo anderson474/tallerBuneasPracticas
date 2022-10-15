@@ -34,7 +34,7 @@ public class Biblioteca {
      * por año.
      */
     protected List<Cancion> CancionesFiltradasYear = new ArrayList<>();
-    protected List<Cancion> CancionesFiltradasId = new ArrayList<>();
+    protected Cancion CancionFiltradaId;
     /**
      * El año que se va mandar a buscar.
      */
@@ -113,12 +113,20 @@ public class Biblioteca {
 
 
     public Cancion filtroId(int id){
-        this.CancionesFiltradasId=
-                 Canciones.stream().filter(cancion -> cancion.getId()==id).collect(Collectors.toList());
-        return (Cancion) CancionesFiltradasId;
+        //this.CancionesFiltradasId=
+                 //Canciones.stream().filter(cancion -> cancion.getId()== id).collect(Collectors.toList());
+        for(int i=0; i<Canciones.size(); i++){
+            if(Canciones.get(i).getId()==id){
+                this.CancionFiltradaId=  Canciones.get(i);
+            }
+        }
+
+        return CancionFiltradaId;
     }
 
-    public List<Cancion> getCancionesFiltradasId() {
-        return CancionesFiltradasId;
+    public Cancion getCancionesFiltradasId() {
+        return CancionFiltradaId;
     }
+
+
 }

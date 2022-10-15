@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class ManejoBiblioteca {
@@ -13,12 +15,13 @@ public class ManejoBiblioteca {
         Scanner input = new Scanner(System.in);
         Boolean menu;
         String accion;
+        List<createPlaylist> playlists=new ArrayList<>();
         System.out.println("Bienvenido a su biblioteca de canciones");
         do{
             System.out.println("Seleccione una opción");
             System.out.println("1. Adicionar canción \n2. Ver listado de canciones \n3.Ordenar por duracion");
             System.out.println("4. Ordenar por fecha \n5. Filtar por genero \n6.Filtrar por año \n7.crear" +
-                    " playlist");
+                    " playlist \n8. ver playlist");
             accion = input.nextLine();
             //input.skip("\n");
 
@@ -88,11 +91,23 @@ public class ManejoBiblioteca {
                         System.out.println("que cancion por id desea agregar a la playlist");
                         String identificador=input.nextLine();
                         int id=Integer.parseInt(identificador);
-                        new createPlaylist(name).filtroId(id);
+                        createPlaylist playlist =new createPlaylist(name);
+                        playlists.add(playlist);
+                        playlist.AddCancion(bib.filtroId(id));
                         System.out.println("desea agregar otra cancion?");
                         masCanicones= input.nextBoolean();
                         input.skip("\n");
                     }
+                    break;
+                case "8":
+                    System.out.println("Que playlist desea ver?");
+                    String namePlaylist= input.nextLine();
+                    for(int i=0; i<playlists.size(); i++){
+                        if(playlists.get(i).getName().equalsIgnoreCase(namePlaylist)){
+                            System.out.println(playlists.get(i).getCanciones());
+                        }
+                    }
+                    break;
 
 
 
