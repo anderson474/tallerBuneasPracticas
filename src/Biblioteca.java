@@ -80,8 +80,7 @@ public class Biblioteca {
      */
     public void FiltrarGenero(String genero){
         this.genero=genero;
-        this.CancionesFiltradasGene =
-                 Canciones.stream().filter(cancion -> cancion.getGenero()==genero).collect(Collectors.toList());
+        this.CancionesFiltradasGene = Canciones.stream().filter(cancion -> this.genero.equalsIgnoreCase(cancion.getGenero())).collect(Collectors.toList());
     }
 
     /**
@@ -93,18 +92,18 @@ public class Biblioteca {
      */
     public void FiltrarPorAño(int year){
         this.year=year;
-        this.CancionesFiltradasYear=
+        this.CancionesFiltradasYear =
                 Canciones.stream().filter(cancion -> cancion.getFecha().getYear()==year).collect(Collectors.toList());
 
     }
 
 
     public List<Cancion> getCancionesFiltradasGene() {
-        return CancionesFiltradasGene;
+        return this.CancionesFiltradasGene;
     }
 
     public List<Cancion> getCancionesFiltradasYear() {
-        return CancionesFiltradasYear;
+        return this.CancionesFiltradasYear;
     }
 
     public int getYear() {
