@@ -55,14 +55,14 @@ public class ManejoBiblioteca {
                     break;
 
                 case "3":
-                    Collections.sort(bib.getCanciones(), new OrdenarPorDuracion());
+                    Collections.sort(bib.getCanciones(), new SortByDuration());
                     System.out.println("Ordenado por duración");
                     for(int i=0; i<bib.getCanciones().size(); i++){
                         System.out.println(bib.getCanciones().get(i));
                     }
                     break;
                 case "4":
-                    Collections.sort(bib.getCanciones(), new OrdenarPorFecha());
+                    Collections.sort(bib.getCanciones(), new SortByDate());
                     System.out.println("Ordenado por fecha");
                     for(int i=0; i<bib.getCanciones().size(); i++){
                         System.out.println(bib.getCanciones().get(i));

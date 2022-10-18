@@ -18,7 +18,7 @@ import java.util.Comparator;
  * @since [1.0.0]
  *
  */
-public class OrdenarPorDuracion implements Comparator<Cancion> {
+public class SortByDuration implements Comparator<Cancion> {
     public int compare(Cancion a, Cancion b) {
         return a.getDuracion() - b.getDuracion();
     }

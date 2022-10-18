@@ -18,7 +18,7 @@ import java.util.Comparator;
  * @since [1.0.0]
  *
  */
-public class OrdenarPorFecha implements Comparator<Cancion>{
+public class SortByDate implements Comparator<Cancion>{
         public int compare(Cancion a, Cancion b) {
             
             return a.getFecha().compareTo(b.getFecha());
