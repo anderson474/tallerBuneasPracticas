@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b46c1cf3-28b2-417d-9813-5e3c44514253" name="Changes" comment="Concretado de las clases biblioteca y creatplaylist">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Biblioteca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManejoBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManejoBiblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Biblioteca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cancion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ManejoBiblioteca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrdenarPorDuracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrdenarPorDuracion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrdenarPorFecha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrdenarPorFecha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/createPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreatePlaylist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libraryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/libraryManagement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +79,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="ManejoBiblioteca" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ManejoBiblioteca" />
+    <configuration name="libraryManagement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="libraryManagement" />
       <module name="TallerBuenasPracticas" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -80,7 +88,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ManejoBiblioteca" />
+        <item itemvalue="Application.libraryManagement" />
       </list>
     </recent_temporary>
   </component>
@@ -165,11 +173,6 @@
           <properties class="java.util.InputMismatchException" package="java.util" />
           <option name="timeStamp" value="33" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ManejoBiblioteca.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

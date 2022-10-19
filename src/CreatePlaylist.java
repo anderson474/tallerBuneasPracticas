@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
 /**
  * [Esta clase permite crear playlists de
  *  mandando el nombre de la playlist, y utilizando
@@ -18,12 +15,12 @@ import java.util.Arrays;
  * @version [1.0.0]
  *
  * @author [Jhon Anderson Galeano Santillana -jhon.galeano201@tau.usbmed.edu.co
- *          Juan Guillermo Morales  -]
+ *          Juan Guillermo Morales  -juanguillermo93@gmail.com]
  *
  * @since [1.0.0]
  *
  */
-public class createPlaylist extends Biblioteca {
+public class CreatePlaylist extends Library {
     private String name;
 
 
@@ -34,17 +31,9 @@ public class createPlaylist extends Biblioteca {
      * en la posición cero, y además inicializa su nombre(el de la playlist).
      * @param name el nombre de la playlist.
      */
-    public createPlaylist(String name) {
+    public CreatePlaylist(String name) {
         this.name = name;
-        this.cont=0;
     }
-
-
-    public int getCont() {
-        return cont;
-    }
-
-
 
     public String getName() {
         return name;
