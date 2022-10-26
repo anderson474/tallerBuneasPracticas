@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b46c1cf3-28b2-417d-9813-5e3c44514253" name="Changes" comment="Concretado de las clases biblioteca y creatplaylist">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Biblioteca.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cancion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManejoBiblioteca.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrdenarPorDuracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrdenarPorDuracion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrdenarPorFecha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrdenarPorFecha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/createPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreatePlaylist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/libraryManagement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +124,14 @@
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="SHOW_OTHER_BRANCHES" value="true" />
+    <option name="COLUMN_ID_WIDTH">
+      <map>
+        <entry key="Table.Default.Author.ColumnIdWidth" value="15" />
+        <entry key="Table.Default.Date.ColumnIdWidth" value="88" />
+        <entry key="Table.Default.Hash.ColumnIdWidth" value="70" />
+        <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="51" />
+      </map>
+    </option>
     <option name="COLUMN_ID_ORDER">
       <list>
         <option value="Default.Root" />
@@ -141,7 +139,13 @@
         <option value="Default.Date" />
         <option value="Default.Subject" />
         <option value="Space.CommitStatus" />
+        <option value="Default.Hash" />
       </list>
+    </option>
+    <option name="COLUMN_ID_VISIBILITY">
+      <map>
+        <entry key="Table.Default.Hash.ColumnIdVisibility" value="true" />
+      </map>
     </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
