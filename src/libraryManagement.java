@@ -71,7 +71,7 @@ public class libraryManagement {
 
                 case "3":
                     /*llamado al metodo sort, el cual permite clasificar una lista, en este caso por duración*/
-                    Collections.sort(bib.getSongs(), new OrdenarPorDuracion());
+                    Collections.sort(bib.getSongs(), new SortByDuration());
                     System.out.println("Ordenado por duración");
                     for(int i = 0; i<bib.getSongs().size(); i++){
                         System.out.println(bib.getSongs().get(i));
@@ -79,7 +79,7 @@ public class libraryManagement {
                     break;
                 case "4":
                     /*llamado al metodo sort, el cual permite clasificar una lista, en este caso por fecha*/
-                    Collections.sort(bib.getSongs(), new OrdenarPorFecha());
+                    Collections.sort(bib.getSongs(), new SortByDate());
                     System.out.println("Ordenado por fecha");
                     for(int i = 0; i<bib.getSongs().size(); i++){
                         System.out.println(bib.getSongs().get(i));
