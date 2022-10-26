@@ -18,7 +18,7 @@ import java.util.Comparator;
  * @since [1.0.0]
  *
  */
-public class SortByDuration implements Comparator<Cancion> {
+public class SortByDuration implements Comparator<Song> {
     /**
          * Metodo encargado de comparar dos canciones
          * de acuerdo a su duración
@@ -27,7 +27,7 @@ public class SortByDuration implements Comparator<Cancion> {
          * @return numero entero que corresponde a la diferencia
          * entre las duraciones de las canciones A y B
          */
-    public int compare(Cancion a, Cancion b) {
-        return a.getDuracion() - b.getDuracion();
+    public int compare(Song a, Song b) {
+        return a.getDuration() - b.getDuration();
     }
 }

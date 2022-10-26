@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
  * de la biblioteca ver que canciones se encontraron con el filtro de
  * busqueda
  *  ej:
- *  Biblioteca bib=new Biblioteca();
+ *  Library bib=new Library();
  *         bib.AddCancion(c1);
  *Nota: como esta es la clase padre de la creación de las playlist puede utilizar los mismos
  * metodos, como por ejemplo agregar una canción.

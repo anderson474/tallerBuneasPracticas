@@ -18,7 +18,7 @@ import java.util.Comparator;
  * @since [1.0.0]
  *
  */
-public class SortByDate implements Comparator<Cancion>{
+public class SortByDate implements Comparator<Song>{
         /**
          * Metodo encargado de comparar dos canciones
          * de acuerdo a su fecha
@@ -27,8 +27,8 @@ public class SortByDate implements Comparator<Cancion>{
          * @return numero entero que corresponde a la diferencia
          * entre las fechas de las canciones A y B
          */
-        public int compare(Cancion songA, Cancion songB) {
+        public int compare(Song songA, Song songB) {
             
-            return songA.getFecha().compareTo(songB.getFecha());
+            return songA.getDate().compareTo(songB.getDate());
         }
 } 
