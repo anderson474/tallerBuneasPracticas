@@ -43,16 +43,18 @@ y lo mismo para el genero, si no se encuentra ninguna canción con esas caracter
 ![image](https://user-images.githubusercontent.com/113210248/198041071-63f794fa-bab2-4c00-aae7-6fd93223ec18.png)
 
 Como un vector vacio.
+Para crear la playlist se debe de colocar un nombre a la playlist y se le deben asignar canciones,
+esto se hace mediante el identificador de cada canción, cuando imprimimos la biblioteca vemos
+que las canciones estan catalogadas como cancion1, cancion2, etc. y así a medida que agrgue canciones.
+si yo coloco uno que es el identificador de la cancion uno que esta por defecto, me la agrega, y me pregunta
+si deseo agregar más canciones, si le doy false se sale de la configuración de la playlist.
+Si la quiero ver le doy a la opción ocho y la busqueda se hace por nombre.
+El procedimiento anteriormente descrito se evidencia en la siguiente imagen:
 
+![image](https://user-images.githubusercontent.com/113210248/198042773-038528e3-4460-4c30-bcb0-dce98c36ecad.png)
 
-
-
-
-
-
-
-
-
+uya para finalizar el proceso se puede dar a false cuando le pregunta si desea continuar y se acaba todo el
+proceso.
 
 
 
@@ -61,5 +63,7 @@ Nota:
 -se destaca que los simbolos que aparecen en las fotos "?" es por las tildes, depende del compiladr o del entorno
 de desarrollo que se las admita.
 -cada vez que termine el depurador se borran las canciones o las playlist agregadas.
+
+Muchas gracias, es con todo el ♥ por Jhon Anderson Galeano Santillana y Juan Guillermo Morales
 
 
