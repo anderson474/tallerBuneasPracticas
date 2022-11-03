@@ -86,7 +86,7 @@ public class Library {
     public void addSong(Song song){
         songs.add(song);
         if(songs.size()>=12){
-            throw new IllegalArgumentException("Solo se pueden adicionar hasta doce canciones a la biblioteca");
+            throw new IllegalArgumentException();
         }
     }
 
@@ -112,7 +112,13 @@ public class Library {
      */
     public void filterGenre(String genre){
         this.genre =genre;
-        this.songsFilteredGenre = songs.stream().filter(song -> this.genre.equalsIgnoreCase(song.getGenre())).collect(Collectors.toList());
+        this.songsFilteredGenre = songs.stream().filter(song ->
+                this.genre.equalsIgnoreCase(song.getGenre())).collect(Collectors.toList());
+        boolean ans = songsFilteredGenre.isEmpty();
+        if(ans==true){
+            throw new NullPointerException();
+
+        }
     }
 
     /**
@@ -130,6 +136,11 @@ public class Library {
         this.year=year;
         this.songsFilteredYear =
                 songs.stream().filter(song -> song.getDate().getYear()==year).collect(Collectors.toList());
+        boolean ans = songsFilteredYear.isEmpty();
+        if(ans==true){
+            throw new NullPointerException();
+
+        }
 
     }
     /**

@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.time.format.DateTimeParseException;
+import java.util.*;
 
 public class libraryManagement {
     public static void main(String[] args) {
@@ -35,32 +33,46 @@ public class libraryManagement {
             /*Dependiendo de la elección del usuario ingresa al case correspondiente dentro del switch */
             switch(accion){
                 case "1":
-                    System.out.println("Escriba el nombre de la canción");
-                    /* Captura de datos del usuario */
-                    String nombre = input.nextLine();
+                    try{
+                        System.out.println("Escriba el nombre de la canción");
+                        /* Captura de datos del usuario */
+                        String nombre = input.nextLine();
 
-                    System.out.println("Escriba la fecha \"2022-07-07\"");
-                    /* Captura de datos del usuario */
-                    CharSequence fecha = input.nextLine();
+                        System.out.println("Escriba la fecha \"2022-07-07\"");
+                        /* Captura de datos del usuario */
+                        CharSequence fecha = input.nextLine();
 
-                    System.out.println("Duracion de la canción en segundos: ");
-                    /* Captura de datos del usuario */
-                    int duracion = input.nextInt();
-                    input.skip("\n");
-                    System.out.println("Escriba el genero de la canción");
-                    /* Captura de datos del usuario */
-                    String genero = input.nextLine();
+                        System.out.println("Duracion de la canción en segundos: ");
+                        /* Captura de datos del usuario */
+                        String duracion = input.nextLine();
 
-                    System.out.println("Escriba la caratula de la canción");
-                    /* Captura de datos del usuario */
-                    String caratula = input.nextLine();
 
-                    System.out.println("Escriba la descripcion de la canción");
-                    /* Captura de datos del usuario */
-                    String descripcion = input.nextLine();
+                        System.out.println("Escriba el genero de la canción");
+                        /* Captura de datos del usuario */
+                        String genero = input.nextLine();
 
-                    /*llamado al metodo addSong e instanciacion de objeto del tipo Song */
-                    bib.addSong(new Song(nombre, fecha, duracion, genero, caratula, descripcion));
+                        System.out.println("Escriba la caratula de la canción");
+                        /* Captura de datos del usuario */
+                        String caratula = input.nextLine();
+
+                        System.out.println("Escriba la descripcion de la canción");
+                        /* Captura de datos del usuario */
+                        String descripcion = input.nextLine();
+                        try{
+                            /*llamado al metodo addSong e instanciacion 8de objeto del tipo Song */
+                            bib.addSong(new Song(nombre, fecha, Integer.parseInt(duracion), genero, caratula, descripcion));
+                        }catch (DateTimeParseException e){
+                            System.out.println("La fecha ingresada no es valida");
+                            System.out.println("Recuerde que el formato es: YEAR-MONTH-DAY");
+                        }catch(IllegalArgumentException ex){
+                            System.out.println("La duración la debe ingresar en segundos");
+                            System.out.println("(deben ser números)");
+                        }
+
+
+                    }catch (IllegalArgumentException e){
+                        System.out.println("Solo se pueden adicionar hasta doce canciones a la biblioteca");
+                    }
                     break;
 
                 case "2":
@@ -90,19 +102,28 @@ public class libraryManagement {
                     /* Captura de datos del usuario */
                     String generoIngresado= input.nextLine();
                     /*llamado al metodo filterGenre que filtra el objeto bib de acuerdo al valor ingresado */
-                    bib.filterGenre(generoIngresado);
-                    System.out.println("Las canciones filtradas por el genero "+generoIngresado+ " :");
-                    bib.print(bib.getSongsFilteredGenre());
+                    try{
+                        bib.filterGenre(generoIngresado);
+                        System.out.println("Las canciones filtradas por el genero "+generoIngresado+ " :");
+                        bib.print(bib.getSongsFilteredGenre());
+                    }catch (NullPointerException e){
+                        System.out.println("El genero que desea buscar no se encuentra disponible");
+                    }
                     break;
                 case "6":
                     System.out.println("que año desea buscar?");
                     /* Captura de datos del usuario */
                     String añoIngresado= input.nextLine();
                     int year= Integer.parseInt(añoIngresado);
-                    /*llamado al metodo filterByYear que filtra el objeto bib de acuerdo al año ingresado */
-                    bib.filterByYear(year);
-                    System.out.println("Las canciones filtradas por el year "+bib.getYear()+ " :");
-                    bib.print(bib.getSongsFilteredYear());
+                    try{
+                        /*llamado al metodo filterByYear que filtra el objeto bib de acuerdo al año ingresado */
+                        bib.filterByYear(year);
+                        System.out.println("Las canciones filtradas por el year "+bib.getYear()+ " :");
+                        bib.print(bib.getSongsFilteredYear());
+                    }catch (NullPointerException e){
+                        System.out.println("El año que desea buscar no se encuentra disponible");
+                    }
+
                     break;
                 case "7":
                     System.out.println("que nombre desea para la playlist?");
